@@ -21,7 +21,6 @@
             </div>
         </nav>
     </header>
-    <!-- / #main-header -->
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-4">
@@ -34,13 +33,13 @@
                                 required />
                             <br />
                             <label for="">Numero</label>
-                            <input type="text" placeholder="Numero" class="form-control" id="numero" name="numero"
+                            <input type="number" placeholder="Numero" class="form-control" id="numero" name="numero"
                                 required />
                             <br />
-                            <button class="btn btn-sm btn-primary" type="button">
+                            <button class="btn btn-sm btn-primary" type="button" onclick="guardar()">
                                 Guardar
                             </button>
-                            <button class="btn btn-sm btn-danger" type="button">
+                            <button class="btn btn-sm btn-danger" type="button" onclick="limpiar()">
                                 Limpiar
                             </button>
                         </form>
@@ -57,11 +56,11 @@
                                         <th>No</th>
                                         <th>Nombre</th>
                                         <th>Numero</th>
-                                        <th>Edit</th>
-                                        <th>Hapus</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                 </thead>
-                                <tbody id="table"></tbody>
+                                <tbody id="tabla"></tbody>
                             </table>
                         </div>
                     </div>
@@ -87,6 +86,15 @@
     <script src="guardar.js"></script>
     <script src="buscar.js"></script>
     <script src="eliminar.js"></script>
+    <script>
+        traerContenido()
+    </script>
+    <script>
+        function clearData() {
+            document.getElementById('form').reset()
+            document.getElementById('id').value = ""
+        }
+    </script>
 </body>
 
 </html>
