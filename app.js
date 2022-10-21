@@ -13,17 +13,17 @@ function traerContenido() {
                 <td>${valor.nombre}</td>
                 <td>${valor.numero}</td>
                 <td>
-                    <button class="btn btn-sm btn-success" onclick="buscar(${
+                    <button class="btn btn-sm btn-warning" onclick="buscar(${
                       valor.id
                     })">
-                        <i class="fa fa-edit"></i>
+                        Editar
                     </button>
                 </td>
                 <td>
                     <button class="btn btn-sm btn-danger" onclick="eliminar(${
                       valor.id
                     })">
-                        <i class="fa fa-trash"></i>
+                        Eliminar
                     </button>
                 </td>
             </tr>`;
